@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>HTML Library</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-upper-block">
+        <svg
+          class="header-logo"
+          width="100px"
+          height="100px"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26" />
+          <path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529" />
+          <path
+            d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z"
+            fill="white"
+          />
+        </svg>
+        <div class="header-search">
+          <input type="text" placeholder="Search" class="header-search-input" />
+          <button type="button" class="header-search-button">Search</button>
+        </div>
+      </div>
+    </header>
+    <div class="header-lower-block">
+        <button type="button" class="header-nav-scroll-button-previous" id="nav-prev"></button>
+          <ul class="header-nav-list">
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-link" id="basic">Basic HTML</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-link" id="formatting">Formatting</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-link" id="forms">Forms and Inputs</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-link" id="tables">Tables</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-link" id="media">Media</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-link" id="links">Links</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-link" id="semantics">Styles and Semantics</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-link" id="programming">Programming</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-link" id="meta">Miscellaneous</a>
+            </li>
+          </ul>
+        <button type="button" class="header-nav-scroll-button-next" id="nav-next"></button>
+      </div>
+
+    <main class="main">
+      <p class="main-search-results">Awaiting input...</p>
+
+    </main>
+  </body>
+</html>

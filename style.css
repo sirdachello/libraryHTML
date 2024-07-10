@@ -1,0 +1,146 @@
+* {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+ * {
+    -webkit-user-drag: none;
+}
+
+/* ::-webkit-scrollbar {
+    display: none;
+} */
+
+body {
+    background: linear-gradient(in lch, rgb(233, 163, 57), blue);
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-logo {
+    flex-shrink: 0;
+}
+
+.header-search-button, .header-search-input {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.header-upper-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: brown;
+    padding: 0 40px;
+}
+
+.header-lower-block {
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #f8b58b;
+    z-index: 1000;
+    padding-block: 1px;
+
+    overflow-x: scroll;
+}
+
+.header-lower-block::-webkit-scrollbar {
+    display: none;
+}
+
+.header-nav-list {
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+
+    overflow-x: scroll;
+}
+.header-nav-list::-webkit-scrollbar {
+    display: none;
+}
+
+.header-nav-item {
+    text-wrap: nowrap;
+    font-size: 1.3rem;
+    position: relative;
+
+}
+.header-nav-item a{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.header-nav-item:not(.active) a:hover::after{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2px;
+    background-color: black;
+    animation: navAnimation 0.12s forwards;
+}
+@keyframes navAnimation {
+    100% {
+        width: 100%;
+    }
+}
+
+.active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+.header-lower-block button {
+    position:absolute;
+    height: 100%;
+    width: 20px;
+    display: inline-block;
+    background-color: rgba(241,101,41, 0.8);
+    z-index: 50;
+
+    cursor: pointer;
+}
+.header-nav-scroll-button-next {
+    top: 0;
+    right: 0;
+    border: none;
+    border-left: 2px solid black;
+}
+.header-nav-scroll-button-previous {
+    top: 0;
+    left: 0;
+    border: none;
+    border-right: 2px solid black;
+}
+
+.header-lower-block button:hover {
+    background-color: rgba(229,77,39,255);
+}
+
+.main-search-results {
+    font-size: 1.2rem;
+    margin-left: 20px;
+    text-wrap: wrap;
+}
+.main-search-results p:hover {
+    text-decoration: underline;
+}
